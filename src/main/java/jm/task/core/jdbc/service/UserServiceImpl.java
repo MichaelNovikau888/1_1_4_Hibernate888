@@ -3,6 +3,7 @@ package jm.task.core.jdbc.service;
 import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
+import org.hibernate.Session;
 
 import java.util.List;
 import static jm.task.core.jdbc.util.Util.*;

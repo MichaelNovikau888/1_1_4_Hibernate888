@@ -7,7 +7,7 @@ import org.junit.Test;
 import java.util.List;
 
 public class UserServiceTest {
-    private final UserService userService = new UserServiceImpl();
+    private final UserServiceImpl userService = new UserServiceImpl();
 
     private final String testName = "Ivan";
     private final String testLastName = "Ivanov";
@@ -62,6 +62,7 @@ public class UserServiceTest {
             userService.createUsersTable();
             userService.saveUser(testName, testLastName, testAge);
             userService.removeUserById(1L);
+            userService.cleanUsersTable();
         } catch (Exception e) {
             Assert.fail("При тестировании удаления пользователя по id произошло исключение\n" + e);
         }
@@ -70,8 +71,8 @@ public class UserServiceTest {
     @Test
     public void getAllUsers() {
         try {
-            userService.dropUsersTable();
-            userService.createUsersTable();
+          //  userService.dropUsersTable();
+         //   userService.createUsersTable();
             userService.saveUser(testName, testLastName, testAge);
             List<User> userList = userService.getAllUsers();
 

@@ -3,7 +3,7 @@ package jm.task.core.jdbc.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "User")
+@Table(name = "Users")
 public class User {
 
     @Id
